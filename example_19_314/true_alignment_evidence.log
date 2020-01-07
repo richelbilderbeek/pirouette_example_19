@@ -1,0 +1,62 @@
+#
+#model:
+#
+#<?xml version="1.0" encoding="UTF-8" standalone="no"?><input id="posterior" spec="beast.core.util.CompoundDistribution">
+#    <distribution id="prior" spec="beast.core.util.CompoundDistribution">
+#        <distribution id="CoalescentConstant.t:true_alignment_evidence" spec="beast.evolution.tree.coalescent.Coalescent">
+#            <populationModel id="ConstantPopulation.t:true_alignment_evidence" spec="beast.evolution.tree.coalescent.ConstantPopulation">
+#                <parameter id="popSize.t:true_alignment_evidence" name="popSize" spec="beast.core.parameter.RealParameter">0.3</parameter>
+#            </populationModel>
+#            <treeIntervals id="TreeIntervals.t:true_alignment_evidence" spec="beast.evolution.tree.coalescent.TreeIntervals">
+#                <tree id="Tree.t:true_alignment_evidence" spec="beast.evolution.tree.Tree">
+#                    <taxonset id="TaxonSet.true_alignment_evidence" spec="beast.evolution.alignment.TaxonSet">
+#                    </taxonset>
+#                </tree>
+#            </treeIntervals>
+#        </distribution>
+#        <prior id="PopSizePrior.t:true_alignment_evidence" name="distribution" x="@popSize.t:true_alignment_evidence">
+#            <OneOnX id="OneOnX.100" name="distr"/>
+#        </prior>
+#        <prior id="KappaPrior.s:true_alignment_evidence" name="distribution">
+#            <parameter id="kappa.s:true_alignment_evidence" lower="0.0" name="x" spec="beast.core.parameter.RealParameter">2.0</parameter>
+#            <LogNormal id="LogNormalDistributionModel.0" name="distr">
+#                <parameter estimate="false" id="RealParameter.0" name="M" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#                <parameter estimate="false" id="RealParameter.1" lower="0.0" name="S" spec="beast.core.parameter.RealParameter" upper="Infinity">1.25</parameter>
+#            </LogNormal>
+#        </prior>
+#        <prior id="ucldStdevPrior.c:true_alignment_evidence" name="distribution">
+#            <parameter id="ucldStdev.c:true_alignment_evidence" lower="0.0" name="x" spec="beast.core.parameter.RealParameter">0.1</parameter>
+#            <Gamma id="Gamma.1" name="distr">
+#                <parameter estimate="false" id="RealParameter.2" name="alpha" spec="beast.core.parameter.RealParameter">0.5396</parameter>
+#                <parameter estimate="false" id="RealParameter.3" name="beta" spec="beast.core.parameter.RealParameter">0.3819</parameter>
+#            </Gamma>
+#        </prior>
+#    </distribution>
+#    <distribution id="likelihood" spec="beast.core.util.CompoundDistribution" useThreads="true">
+#        <distribution data="@true_alignment_evidence" id="treeLikelihood.true_alignment_evidence" spec="beast.evolution.likelihood.ThreadedTreeLikelihood" tree="@Tree.t:true_alignment_evidence">
+#            <siteModel id="SiteModel.s:true_alignment_evidence" spec="beast.evolution.sitemodel.SiteModel">
+#                <parameter estimate="false" id="mutationRate.s:true_alignment_evidence" name="mutationRate" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#                <parameter estimate="false" id="gammaShape.s:true_alignment_evidence" name="shape" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#                <parameter estimate="false" id="proportionInvariant.s:true_alignment_evidence" lower="0.0" name="proportionInvariant" spec="beast.core.parameter.RealParameter" upper="1.0">0.0</parameter>
+#                <substModel id="hky.s:true_alignment_evidence" kappa="@kappa.s:true_alignment_evidence" spec="beast.evolution.substitutionmodel.HKY">
+#                    <frequencies id="estimatedFreqs.s:true_alignment_evidence" spec="beast.evolution.substitutionmodel.Frequencies">
+#                        <parameter dimension="4" id="freqParameter.s:true_alignment_evidence" lower="0.0" name="frequencies" spec="beast.core.parameter.RealParameter" upper="1.0">0.25</parameter>
+#                    </frequencies>
+#                </substModel>
+#            </siteModel>
+#            <branchRateModel id="RelaxedClock.c:true_alignment_evidence" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" tree="@Tree.t:true_alignment_evidence">
+#                <LogNormal S="@ucldStdev.c:true_alignment_evidence" id="LogNormalDistributionModel.c:true_alignment_evidence" meanInRealSpace="true" name="distr">
+#                    <parameter estimate="false" id="RealParameter.4" lower="0.0" name="M" spec="beast.core.parameter.RealParameter" upper="1.0">1.0</parameter>
+#                </LogNormal>
+#                <rateCategories dimension="10" id="rateCategories.c:true_alignment_evidence" spec="beast.core.parameter.IntegerParameter">1</rateCategories>
+#                <parameter estimate="false" id="ucldMean.c:true_alignment_evidence" name="clock.rate" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#            </branchRateModel>
+#        </distribution>
+#    </distribution>
+#</input>
+#
+Sample	NSlikelihood	posterior	likelihood	prior	treeLikelihood	TreeHeight	kappa	freqParameter.1	freqParameter.2	freqParameter.3	freqParameter.4	ucldStdev	rate.mean	rate.variance	rate.coefficientOfVariation	popSize	CoalescentConstant
+0	-107875.33921091228	-107884.6199229011	-107875.33921091228	-9.280711988816437	-107875.33921091228	2.205716394531555	0.9297290671049702	0.24745701179866475	0.23057158003423703	0.25254298820133525	0.269428419965763	0.07009794655907621	0.9834990757418286	0.003113263828359877	0.05717149303731846	0.8197137943616926	-9.103193090364393
+1	-104050.30954557624	-104050.98231747247	-104050.30954557624	-0.6727718962411975	-104050.30954557624	0.45502479783091737	0.8139870850596541	0.24232539461801167	0.23556272695002212	0.23903379958092896	0.2830780788510373	0.06064021026027283	1.0091418414743267	0.0027896964169760296	0.05391693877090247	0.3141188342808799	-1.581935837307188
+2	-84812.46866798546	-84823.64947601539	-84812.46866798546	-11.180808029929114	-84812.46866798546	2.3526599373707966	1.458414900551629	0.24381959221720267	0.23556272695002212	0.23181685681955505	0.2888008240132202	0.011251405549555097	0.9994563434552198	1.34120859072591E-4	0.01160128533362213	1.141760179885031	-11.462319484409788
+3	-84590.44514943066	-84609.688872692	-84590.44514943066	-19.243723261341657	-84590.44514943066	25.84815494409226	2.039944462156936	0.255054114824082	0.22583528855457954	0.24481294612195978	0.27429765049937865	0.014360176903046374	0.9985109734507086	1.1697183933396607E-4	0.010790161987416344	12.337034790939146	-16.786854945837817
