@@ -19,7 +19,7 @@ alignment_params <- create_alignment_params(
   sim_tral_fun = get_sim_tral_with_std_nsm_fun(
     mutation_rate = 0.1
   ),
-  root_sequence = create_blocked_dna(length = 2000),
+  root_sequence = create_blocked_dna(length = 500),
   rng_seed = rng_seed,
   fasta_filename = "true_alignment.fas"
 )
