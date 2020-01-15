@@ -1,8 +1,4 @@
-# Code of example 19
-#
 # Works under Linux and MacOS only
-
-
 library(pirouette)
 suppressMessages(library(ggplot2))
 
