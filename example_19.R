@@ -67,19 +67,6 @@ for (i in seq_along(experiments)) {
 
 check_experiments(experiments)
 
-# Testing
-# if (beastier::is_on_ci()) {
-#   experiments <- experiments[1:3]
-#   for (i in seq_along(experiments)) {
-#     experiments[[i]]$inference_model$mcmc <- create_mcmc(chain_length = 3000, store_every = 1000)
-#     experiments[[i]]$est_evidence_mcmc <- create_mcmc_nested_sampling(
-#       chain_length = 3000,
-#       store_every = 1000,
-#       epsilon = 100.0
-#     )
-#   }
-# }
-
 twinning_params <- create_twinning_params(
   rng_seed_twin_tree = rng_seed,
   sim_twin_tree_fun = get_sim_bd_twin_tree_fun(),
