@@ -56,13 +56,15 @@ for (i in seq_along(experiments)) {
 }
 
 # Make the MCMCs shorter
-for (i in seq_along(experiments)) {
-  experiments[[i]]$inference_model$mcmc$chain_length <- 10000
-  experiments[[i]]$inference_model$mcmc$treelog$log_every <- 1000
-  experiments[[i]]$inference_model$mcmc$tracelog$log_every <- 1000
-  experiments[[i]]$est_evidence_mcmc$chain_length <- 3000
-  experiments[[i]]$est_evidence_mcmc$store_every <- 1000
-  experiments[[i]]$est_evidence_mcmc$epsilon <- 100.0
+if (is_on_ci()) {
+  for (i in seq_along(experiments)) {
+    experiments[[i]]$inference_model$mcmc$chain_length <- 10000
+    experiments[[i]]$inference_model$mcmc$treelog$log_every <- 1000
+    experiments[[i]]$inference_model$mcmc$tracelog$log_every <- 1000
+    experiments[[i]]$est_evidence_mcmc$chain_length <- 3000
+    experiments[[i]]$est_evidence_mcmc$store_every <- 1000
+    experiments[[i]]$est_evidence_mcmc$epsilon <- 100.0
+  }
 }
 
 check_experiments(experiments)
