@@ -55,7 +55,7 @@ for (i in seq_along(experiments)) {
   experiments[[i]]$beast2_options$rng_seed <- rng_seed
 }
 
-# Make the MCMCs shorter
+# Make the MCMCs shorter on CI
 if (is_on_ci()) {
   for (i in seq_along(experiments)) {
     experiments[[i]]$inference_model$mcmc$chain_length <- 10000
