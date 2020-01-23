@@ -1,0 +1,22 @@
+<itsabeastystatewerein version='2.0' sample='10000'>
+<statenode id='Tree.t:twin_alignment'>(((0:0.2325046200112156,1:0.2325046200112156)6:0.5002867235994887,2:0.7327913436107043)7:0.2554480494791065,((3:0.0460787725961056,4:0.0460787725961056)8:0.11511015219854834,5:0.16118892479465394)9:0.8270504682951568)10:0.0</statenode>
+<statenode id='ucldStdev.c:twin_alignment'>ucldStdev.c:twin_alignment[1 1] (0.0,Infinity): 0.044356661264114604 </statenode>
+<statenode id='rateCategories.c:twin_alignment'>rateCategories.c:twin_alignment[10 1] (0,9): 1 2 4 9 1 0 0 4 5 3 </statenode>
+<statenode id='birthRate.t:twin_alignment'>birthRate.t:twin_alignment[1 1] (-Infinity,Infinity): 2.887775154237049 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"YuleBirthRateScaler.t:twin_alignment","p":0.75,"accept":216,"reject":46,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"YuleModelTreeScaler.t:twin_alignment","p":0.5,"accept":24,"reject":255,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"YuleModelTreeRootScaler.t:twin_alignment","p":0.5,"accept":53,"reject":264,"acceptFC":0,"rejectFC":0,"rejectIv":46,"rejectOp":46},
+{"id":"YuleModelUniformOperator.t:twin_alignment","p":"NaN","accept":367,"reject":2404,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"YuleModelSubtreeSlide.t:twin_alignment","p":1,"accept":76,"reject":1335,"acceptFC":0,"rejectFC":0,"rejectIv":520,"rejectOp":520},
+{"id":"YuleModelNarrow.t:twin_alignment","p":"NaN","accept":27,"reject":1280,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"YuleModelWide.t:twin_alignment","p":"NaN","accept":2,"reject":270,"acceptFC":0,"rejectFC":0,"rejectIv":151,"rejectOp":151},
+{"id":"YuleModelWilsonBalding.t:twin_alignment","p":"NaN","accept":0,"reject":293,"acceptFC":0,"rejectFC":0,"rejectIv":145,"rejectOp":145},
+{"id":"ucldStdevScaler.c:twin_alignment","p":0.5,"accept":136,"reject":138,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"CategoriesRandomWalk.c:twin_alignment","p":"NaN","accept":431,"reject":447,"acceptFC":0,"rejectFC":0,"rejectIv":358,"rejectOp":358},
+{"id":"CategoriesSwapOperator.c:twin_alignment","p":"NaN","accept":605,"reject":395,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"CategoriesUniform.c:twin_alignment","p":"NaN","accept":619,"reject":318,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0}
+]}
+-->
