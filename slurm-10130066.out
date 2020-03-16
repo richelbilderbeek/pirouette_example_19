@@ -1,0 +1,57 @@
+Loading required package: beautier
+Loading required package: babette
+Loading required package: beastier
+Loading required package: mauricer
+Loading required package: tracerer
+Registered S3 method overwritten by 'pryr':
+  method      from
+  print.bytes Rcpp
+Error: `n_trees_in_file` not equal to `n_trees_in_output`.
+1/1 mismatches
+[1] 11754 - 10001 == 1753
+In addition: Warning messages:
+1: In scan(file = file, what = "", sep = "\n", quiet = TRUE) :
+  embedded nul(s) found in input
+2: In scan(file = file, what = "", sep = "\n", quiet = TRUE) :
+  embedded nul(s) found in input
+3: In scan(file = file, what = "", sep = "\n", quiet = TRUE) :
+  embedded nul(s) found in input
+Execution halted
+
+
+###############################################################################
+Peregrine Cluster
+Job 10130066 for user 'p230198'
+Finished at: Mon Mar 16 13:59:17 CET 2020
+
+Job details:
+============
+
+Name                : rerun.sh
+User                : p230198
+Partition           : regular
+Nodes               : pg-node139
+Cores               : 1
+State               : FAILED
+Submit              : 2020-03-16T13:48:32
+Start               : 2020-03-16T13:48:40
+End                 : 2020-03-16T13:59:17
+Reserved walltime   : 00:30:00
+Used walltime       : 00:10:37
+Used CPU time       : 00:09:52 (efficiency: 92.95%)
+% User (Computation): 96.26%
+% System (I/O)      :  3.74%
+Mem reserved        : 2000M/core
+Max Mem used        : 868.75M (pg-node139)
+Max Disk Write      : 0.00  (pg-node139)
+Max Disk Read       : 51.20K (pg-node139)
+
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Peregrine in your publications:
+
+https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
+
+################################################################################
