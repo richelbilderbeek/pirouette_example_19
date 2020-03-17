@@ -9,8 +9,9 @@
 ^CODE_OF_CONDUCT\.md$
 ^NEWS\.md$
 ^appveyor\.yml$
-^example_28\.log$
-^example_28$
+^example_19\.log$
+^example_19\.R$
+^example_19$
 ^LICENSE$
 ^\.github$
 
