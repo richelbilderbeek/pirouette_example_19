@@ -1,0 +1,18 @@
+<itsabeastystatewerein version='2.0' sample='10000000'>
+<statenode id='Tree.t:alignment'>(((0:0.09317852513563248,4:0.09317852513563248)8:0.016899500127812772,((1:0.06696430394464337,2:0.06696430394464337)9:0.005137477965589221,3:0.07210178191023259)7:0.03797624335321266)6:0.7325638902543441,5:0.8426419155177893)10:0.0</statenode>
+<statenode id='BDBirthRate.t:alignment'>BDBirthRate.t:alignment[1 1] (0.0,10000.0): 2.5357332453341246 </statenode>
+<statenode id='BDDeathRate.t:alignment'>BDDeathRate.t:alignment[1 1] (0.0,1.0): 0.46875702322497337 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"BirthRateScaler.t:alignment","p":0.18699598590083044,"accept":105601,"reject":278749,"acceptFC":104682,"rejectFC":278589,"rejectIv":0,"rejectOp":0},
+{"id":"DeathRateScaler.t:alignment","p":0.11550740119999403,"accept":80242,"reject":305023,"acceptFC":79385,"rejectFC":304812,"rejectIv":244734,"rejectOp":244734},
+{"id":"BirthDeathTreeScaler.t:alignment","p":0.648222501990467,"accept":82973,"reject":299853,"acceptFC":82825,"rejectFC":298808,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathTreeRootScaler.t:alignment","p":0.4641646254210784,"accept":89544,"reject":295053,"acceptFC":89229,"rejectFC":294269,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathUniformOperator.t:alignment","p":"NaN","accept":570261,"reject":3278505,"acceptFC":568577,"rejectFC":3269033,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathSubtreeSlide.t:alignment","p":0.31085850905712176,"accept":194473,"reject":1726409,"acceptFC":194248,"rejectFC":1721071,"rejectIv":664166,"rejectOp":664166},
+{"id":"BirthDeathNarrow.t:alignment","p":"NaN","accept":642090,"reject":1280275,"acceptFC":640253,"rejectFC":1276606,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathWide.t:alignment","p":"NaN","accept":20681,"reject":364791,"acceptFC":20615,"rejectFC":363734,"rejectIv":213965,"rejectOp":213965},
+{"id":"BirthDeathWilsonBalding.t:alignment","p":"NaN","accept":4292,"reject":381186,"acceptFC":4283,"rejectFC":380080,"rejectIv":197619,"rejectOp":197619}
+]}
+-->
