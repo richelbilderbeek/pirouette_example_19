@@ -65,7 +65,7 @@ pir_outs <- pir_runs(
 # Save summary
 pir_plots(pir_outs) +
   ggtitle(paste("Number of replicates: ", n_phylogenies)) +
-  ggsave(file.path(folder_name, "errors.png"), width = 7, height = 7)
+  ggsave("errors.png", width = 7, height = 7)
 
 # Save
 expect_equal(length(pir_paramses), length(pir_outs))
